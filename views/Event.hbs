@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="/styles.css" />
+
+<h1>This is where I want to ROUTER.POST Events I've created</h1>
+
+<form action="/Event" method="POST"></form>
+<label for="title">Title:{{this.title}} </label>
+<input value="{{event.title}}" type="text" name="Title" id="Title" />
+<br />
+<label for="description">Description:{{this.description}}</label>
+<input value="{{event.description}}" type="text" name="Description" id="Description" />
+<br />
+<label for="time">Time:{{this.time}}</label>
+<input value="{{event.time}}" type="text" name="Time" id="Time" />
+<br />
+<label for="owner">Owner:{{this.owner}}</label>
+<input value="{{event.owner}}" type="text" name="Owner" id="Owner" />
+<br />
+<button class="btn btn-primary" type="submit">ADD</button>
+<a href="/" class="btn btn-secondary">Cancel</a>
+
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 50px;">
+     <a href="/edit/{{this.id}}" class="btn btn-info">Replace</a>
+      <form  action="/Event/{{this.id}}/?_method=delete" method="POST">
+        <input class="btn btn-danger" type="submit" value="Delete">
+      </form>
+</form>

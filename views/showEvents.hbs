@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="/styles.css" />
+<div>
+  <style>
+body {background-image: url("../stylish-hexagonal-line-pattern-background_1017-19742.jpg"); background-color: silver ; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+h1   {color: white}
+p    {color: rgba(0, 0, 172, 0.637);}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  border: 10px;
+}
+
+.section-two {
+color: black;
+}
+
+.topnav {
+  background-color: rgba(255, 255, 255, 0.342);
+  overflow: hidden;
+}
+</style>
+<div class="topnav">
+  <a href="/Event">Home</a>
+  <a href="/add">Add Event</a>
+  <a href="/about">About</a>
+</div>
+
+<h1 class="text-primary">Planned Events</h1>
+
+<a href="/add" class="btn btn-warning">Add Event</a>
+<div>
+<ul>
+    {{#each event}}
+    <li style="List-style: none;" id="section-two"><p><span>Title: {{this.title}}</span></p></li>
+    <li style="List-style: none;" id="section-two"><p><span>Description: {{this.description}}</span></p></li>
+    <li style="List-style: none;" id="section-two"><p><span>Time: {{this.time}}</span></p></li>
+    <li style="List-style: none;" id="section-two"><p><span>Owner: {{this.owner}}</span></p></li>
+</ul>
+</div>
+<div style="display: flex; flex-direction: row; justify-content: center; gap: 50px;">
+     <a href="/edit/{{this.id}}/" class="btn btn-info">Edit</a>
+      <form  action="/Event/{{this.id}}?_method=delete" method="POST">
+        <input class="btn btn-danger" type="submit" value="Delete">
+      </form>
+</div>
+
+</div>   
+   
+    {{/each}}
+

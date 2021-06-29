@@ -1,0 +1,20 @@
+[
+  {
+    "title": "birthday party for Victor",
+    "description": "turning 27",
+    "time": 1111,
+    "owner": "Victor Chau"
+  },
+  {
+    "title": "fourth of July",
+    "description": "fireworks and BBQ",
+    "time": 2222,
+    "owner": "Lindsey Dortch"
+  },
+  {
+    "title": "Summer Vacation",
+    "description": "Beach!",
+    "time": 3333,
+    "owner": "Kirsten Lueder"
+  }
+]

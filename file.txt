@@ -1,0 +1,10 @@
+App Name: hoot-calendar-App
+https://hoot-calendar-app.herokuapp.com/ | https://git.heroku.com/hoot-calendar-app.git
+
+AtlasDB configs
+User: dbUser
+PW: A6y4IP7bguUQm9Zi
+
+mongodb://localhost/Event
+
+heroku config:set DB_URL="mongodb+srv://dbUser:A6y4IP7bguUQm9Zi@cluster0.rrnok.mongodb.net/project_two?retryWrites=true&w=majority"
